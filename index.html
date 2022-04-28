@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Game</title>
+  </head>
+
+  <div class="login_container">
+    <p class="title">Wordcloud game</p>
+    <input
+      type="text"
+      min="3"
+      max="20"
+      id="name_input"
+      placeholder="Enter your nickname here..."
+      class="name_input"
+    />
+    <button class="play_button" id="play_button">play</button>
+  </div>
+
+  <div class="game hide">
+    <p id="question"></p>
+    <div class="game_container"></div>
+    <button class="finish_button" id="finish_button">check answers</button>
+  </div>
+
+  <div class="result_container hide">
+    <p id="congratulation">Congratulations,</p>
+    <p>Your score:</p>
+    <p id="points"></p>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <body></body>
+</html>
