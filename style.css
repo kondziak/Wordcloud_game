@@ -1,174 +1,171 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.login_container{
-    display: block;
+.login_container {
+  display: block;
+  width: 300px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.name_input {
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+
+.name_input::placeholder {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+
+.play_button {
+  margin-top: 10px;
+  padding: 8px 30px;
+  background-color: transparent;
+  border: 1px solid dodgerblue;
+  border-radius: 5px;
+  color: dodgerblue;
+}
+
+.play_button:focus {
+  outline: 0;
+}
+
+.play_button:hover {
+  background-color: dodgerblue;
+  border: 1px solid blue;
+  color: white;
+}
+
+.play_button:active {
+  transform: scale(0.98);
+}
+
+.hide {
+  display: none !important;
+}
+
+.game {
+  width: 450px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#question {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.game_container {
+  display: flex;
+  width: 450px;
+  height: 350px;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+.game_column {
+  width: 70px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game .game_container .game_column span {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.game .game_container .game_column .chosen {
+  color: grey;
+  text-align: center;
+}
+
+.good {
+  color: green;
+}
+
+.good_answer {
+  color: rgb(110, 168, 24);
+}
+
+.wrong {
+  color: red;
+}
+
+.wrong_answer {
+  color: lightcoral;
+}
+
+.finish_button {
+  width: 100px;
+  height: 35px;
+  margin: 10px 0 0;
+  background-color: transparent;
+  border: 1px solid dodgerblue;
+  border-radius: 5px;
+  color: dodgerblue;
+}
+
+.finish_button:focus {
+  outline: 0;
+}
+
+.finish_button:hover {
+  background-color: dodgerblue;
+  border: 1px solid blue;
+  color: white;
+}
+
+.result_container {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+#points {
+  color: dodgerblue;
+}
+
+@media (max-width: 500px) {
+  .game_container {
     width: 300px;
-    text-align: center;
-}
+    height: 200px;
+    padding: 3px;
+  }
 
-.title{
-    font-size: 2rem;
-    margin: 0 0 10px;
-    padding: 0;
-    font-family: sans-serif;
-    font-weight: bold;
-}
-
-.name_input{
+  .game_column {
     width: 300px;
-    height: 40px;
-    padding-left: 10px;
+    height: 200px;
     font-size: 12px;
-    color: rgb(0,0,0);
-}
-
-.name_input::placeholder{
-    font-size: 12px;
-    color: rgb(0,0,0);
-}
-
-
-.play_button{
-    margin-top: 10px;
-    padding: 8px 30px;
-    background-color: transparent;
-    border: 1px solid dodgerblue;
-    border-radius: 5px;
-    color: dodgerblue;
-}
-
-.play_button:focus{
-    outline: 0;
-}
-
-.play_button:hover{
-    background-color: dodgerblue;
-    border: 1px solid blue;
-    color: white;
-}
-
-.play_button:active{
-    transform: scale(0.98);
-}
-
-.hide{
-    display: none !important;
-}
-
-.game{
-    width:450px;
-    height:600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-#question{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.game_container{
-    display: flex;
-    width: 450px;
-    height: 350px;
-    overflow: hidden;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px 25px;
-}
-
-
-.game_column{
-    width: 70px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.game .game_container .game_column span{
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.game .game_container .game_column .chosen{
-    color: grey;
-}
-
-.good{
-    color: green;
-}
-
-.good_answer{
-    color: rgb(110, 168, 24);
-}
-
-.wrong{
-    color: red;
-}
-
-.wrong_answer{
-    color: lightcoral;
-}
-
-
-.finish_button{
-    width: 100px;
-    height: 35px;
-    margin: 10px 0 0;
-    background-color: transparent;
-    border: 1px solid dodgerblue;
-    border-radius: 5px;
-    color: dodgerblue;
-}
-
-.finish_button:focus{
-    outline: 0;
-}
-
-.finish_button:hover{
-    background-color: dodgerblue;
-    border: 1px solid blue;
-    color: white;
-}
-
-.result_container{
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: inherit;
-}
-
-#points{
-    color: dodgerblue;
-}
-
-@media (max-width:500px){
-    .game_container{
-        width: 300px;
-        height: 200px;
-        padding: 0;
-    }
-
-    .game_column{
-        width: 300px;
-        height: 200px;
-        font-size: 12px;
-    }
+  }
 }
