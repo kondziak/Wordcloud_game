@@ -133,6 +133,7 @@ body {
   border: 1px solid dodgerblue;
   border-radius: 5px;
   color: dodgerblue;
+  margin-bottom:5px;
 }
 
 .finish_button:focus {
