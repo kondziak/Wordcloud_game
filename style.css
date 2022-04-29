@@ -174,6 +174,11 @@ body {
 
 @media (max-height: 500px) {
 
+  .game{
+    justify-content: flex-start;
+  }
+
+
   .game_container {
     width: 300px;
     height: 150px;
