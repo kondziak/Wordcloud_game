@@ -15,9 +15,7 @@ createColumns();
 getData();
 
 play_button.addEventListener("click", () => {
-  if (name_input.value.length < 1) {
-    name_input.value = "User";
-  } else if (name_input.value.length > 20) {
+  if (name_input.value.length > 20) {
     name_input.value = name_input.value.slice(0, 20);
   }
   login_container.classList.add("hide");
@@ -83,7 +81,11 @@ function calculateWords(data) {
 
       finish_button.innerText = "finish game";
     } else if (finish_button.innerText === "finish game") {
-      congratulation.innerText += ` ${name_input.value}!`;
+      if (name_input.value.length < 1) {
+        congratulation.innerText += "User";
+      } else {
+        congratulation.innerText += ` ${name_input.value}!`;
+      }
       score.innerText = `${points} points`;
       game.classList.add("hide");
       result_container.classList.remove("hide");
