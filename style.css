@@ -157,6 +157,11 @@ body {
 }
 
 @media (max-width: 500px){
+
+  body{
+    overflow: visible;
+  }
+
   .game_container {
     width: 300px;
     height: 200px;
@@ -171,6 +176,11 @@ body {
 }
 
 @media (max-height: 500px) {
+
+  body{
+    overflow: visible;
+  }
+
   .game_container {
     width: 300px;
     height: 250px;
