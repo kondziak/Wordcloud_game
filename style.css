@@ -156,7 +156,7 @@ body {
   color: dodgerblue;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px){
   .game_container {
     width: 300px;
     height: 200px;
@@ -166,6 +166,20 @@ body {
   .game_column {
     width: 300px;
     height: 200px;
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 500px) {
+  .game_container {
+    width: 300px;
+    height: 250px;
+    padding: 3px;
+  }
+
+  .game_column {
+    width: 300px;
+    height: 250px;
     font-size: 12px;
   }
 }
