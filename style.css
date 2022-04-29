@@ -159,10 +159,6 @@ body {
 
 @media (max-width: 500px){
 
-  body{
-    overflow: visible;
-  }
-
   .game_container {
     width: 300px;
     height: 200px;
@@ -178,19 +174,15 @@ body {
 
 @media (max-height: 500px) {
 
-  body{
-    overflow: visible;
-  }
-
   .game_container {
     width: 300px;
-    height: 250px;
-    padding: 3px;
+    height: 150px;
+    padding: 2px;
   }
 
   .game_column {
     width: 300px;
-    height: 250px;
-    font-size: 12px;
+    height: 150px;
+    font-size: 10px;
   }
 }
