@@ -15,6 +15,11 @@ createColumns();
 getData();
 
 play_button.addEventListener("click", () => {
+  if (name_input.value.length < 1) {
+    name_input.value = "User";
+  } else if (name_input.value.length > 20) {
+    name_input.value = name_input.value.slice(0, 20);
+  }
   login_container.classList.add("hide");
   game.classList.remove("hide");
 });
